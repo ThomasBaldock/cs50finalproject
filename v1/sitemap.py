@@ -33,4 +33,4 @@ uncleaned_webpages = getPagesFromSitemap("https://www.recipetineats.com/")
 
 webpages = getListUniquePages(uncleaned_webpages)
 
-print(webpages)
+###NEED TO WRITE CODE WHICH UPLOADS WEBPAGES TO SQLITE3 database
