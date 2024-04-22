@@ -7,7 +7,7 @@ def store_ingredients_in_database(url, recipe_title):
     ingredients = get_ingredients(url)
 
     # Connect to SQLite3 database
-    conn = sqlite3.connect('/Users/Tommy/Documents/python-projects/website parser/data/recipes.db')
+    conn = sqlite3.connect('sample.db')
     cursor = conn.cursor()
 
     # Insert ingredients into the database
@@ -20,8 +20,7 @@ def store_ingredients_in_database(url, recipe_title):
             quantity, unit, name = '', '', ingredient
 
         # Insert into the ingredients table
-        cursor.execute("INSERT INTO ingredients (quantity, unit, name, group_name, recipe) VALUES (?, ?, ?, ?, ?)",
-                       (quantity, unit, name, group_name, recipe_title))
+        cursor.execute("INSERT INTO ingredients (quantity, unit, name, group_name, recipe) VALUES (?, ?, ?, ?, ?)", (quantity, unit, name, group_name, recipe_title))
 
     # Commit changes and close connection
     conn.commit()

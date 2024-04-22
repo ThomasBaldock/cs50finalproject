@@ -116,8 +116,8 @@ def move_quantities(Quantities, Names, standard_units):
                     Names[i] = rest.strip()
                 break
 
-# Example usage:
 url = 'https://www.recipetineats.com/spicy-maple-roast-carrots-with-crispy-chickpeas/'
+
 ingredients = get_ingredients(url)
 quantities, names = seperate(ingredients)
 names = clean_names(names)
